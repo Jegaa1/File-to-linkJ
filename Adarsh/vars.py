@@ -36,7 +36,7 @@ class Var(object):
     else:
         URL = "http://{}/".format(FQDN)
     DATABASE_URL = str(getenv('DATABASE_URL', "mongodb+srv://video:video@cluster0.gp0rn.mongodb.net/?retryWrites=true&w=majority"))
-    UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL', ''))
+    UPDATES_CHANNEL = str(getenv('UPDATES_CHANNEL'))
     BANNED_CHANNELS = list(set(int(x) for x in str(getenv("BANNED_CHANNELS", "")).split()))      
     SHORTLINK_URL = getenv('SHORTLINK_URL', 'tnshort.net')
     SHORTLINK_API = getenv('SHORTLINK_API', '003db0d0a2e56943b93dc0abd80e1260a17166c8')
